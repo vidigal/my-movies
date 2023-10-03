@@ -18,15 +18,17 @@ export class PrincipalComponent implements OnInit {
 
   ngOnInit(): void {
     this.principalService.listarFilmes().subscribe(data => {
+      console.log(data);
       this.id = data.id;
       this.original_title = data.original_title;
       this.homepage = data.homepage;
       this.overview = data.overview;
+      this.imgSrc = this.imgSrc + data.results[1].backdrop_path;
 
-      this.principalService.listarImagens('615656').subscribe(img => {
-        console.log(img);
-        this.imgSrc = this.imgSrc + img.posters[0].file_path;
-      });
+      // this.principalService.listarImagens('569094').subscribe(img => {
+      //   console.log(img);
+      //   this.imgSrc = this.imgSrc + img.posters[0].file_path;
+      // });
 
     });
   }
