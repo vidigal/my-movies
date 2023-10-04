@@ -1,8 +1,7 @@
 <ul>
-    <li>ID: {{ id }}</li>
-    <li>Título Original: {{ original_title }}</li>
-    <li>Site: {{ homepage }}</li>
-    <li>Overview: {{ overview }}</li>
+    <li *ngFor="let filme of filmes">{{filme['original_title']}} - {{filme['overview']}} </li>
 </ul>
 
-<img [src]="imgSrc">
+
+
+<!-- <li *ngFor="let item of items; index as i; trackBy: trackByFn">...</li> -->
