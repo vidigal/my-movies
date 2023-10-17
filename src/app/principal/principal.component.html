@@ -1,6 +1,22 @@
-<ul>
-    <li *ngFor="let filme of filmes">{{filme['original_title']}} - {{filme['overview']}} </li>
-</ul>
+<div class="container" style="padding-top: 10px;">
+    <div class="row">
+    <div class="card" style="width: 18rem;" *ngFor="let filme of filmes">
+        <img src="https://image.tmdb.org/t/p/original/{{filme.backdrop_path}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{filme.title}}</h5>
+            <p class="card-text">{{filme.overview}}</p>
+            <a href="#" class="btn btn-primary">Detalhes</a>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- <ul>
+    <li *ngFor="let filme of filmes">
+        {{filme.original_title}} - {{filme.overview}} - {{filme.backdrop_path}}
+        <img src="https://image.tmdb.org/t/p/original/{{filme.backdrop_path}}" width="300px"> </li>
+</ul> -->
 
 
 

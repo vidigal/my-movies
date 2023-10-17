@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PrincipalService } from './principal.service';
+import { IMovie } from '../model/IMovie';
 
 @Component({
   selector: 'app-principal',
@@ -8,7 +9,7 @@ import { PrincipalService } from './principal.service';
 })
 export class PrincipalComponent implements OnInit {
 
-  filmes = [];
+  filmes: IMovie[] = [];
 
   constructor(private principalService: PrincipalService) {}
 
